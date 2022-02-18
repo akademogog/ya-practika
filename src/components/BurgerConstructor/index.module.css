@@ -1,0 +1,42 @@
+.constructor {
+    max-width: 600px;
+    width: 100%;
+    padding: 100px 0px 0px 16px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.element {
+    margin: 0 16px 16px 32px;
+}
+
+.element:last-child {
+    margin-bottom: 0px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.price span {
+    margin-right: 8px;
+}
+
+.price svg {
+    width: 36px;
+    height: 36px;
+}
+
+.order {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

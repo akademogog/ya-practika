@@ -1,0 +1,19 @@
+.constructor {
+    max-width: 600px;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.tabsHeader {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.tabBtn {
+    width: 100%;
+}
+
+.area {
+    min-height: 664px;
+}
