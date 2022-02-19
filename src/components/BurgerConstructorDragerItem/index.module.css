@@ -1,0 +1,16 @@
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 568px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.block:last-child {
+    margin-bottom: 0;
+}
+
+.icon {
+    margin-right: 8px;
+}
