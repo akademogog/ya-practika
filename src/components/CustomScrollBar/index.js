@@ -1,6 +1,7 @@
 import { Scrollbars } from 'react-custom-scrollbars';
+import PropTypes from 'prop-types';
 
-function CustomScrollBar(props) {
+function CustomScrollBar({autoHeightMax, ...props}) {
    const renderThumb = () => {
       const thumbStyle = {
          background: "#8585AD"
@@ -29,7 +30,7 @@ function CustomScrollBar(props) {
       <Scrollbars
          autoHeight
          autoHeightMin = { 0 }
-         autoHeightMax = { props.autoHeightMax }
+         autoHeightMax = { autoHeightMax }
          hideTracksWhenNotNeeded={true}
          renderThumbVertical={renderThumb}
          renderTrackVertical={renderTrack}
@@ -37,6 +38,10 @@ function CustomScrollBar(props) {
          {props.children}
       </Scrollbars>
    );
- }
- 
- export default CustomScrollBar;
+}
+
+CustomScrollBar.propTypes = {
+   autoHeightMax: PropTypes.number.isRequired
+};
+
+export default CustomScrollBar;

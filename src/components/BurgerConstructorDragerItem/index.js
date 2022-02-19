@@ -1,19 +1,26 @@
 import { DragIcon, ConstructorElement } from '@ya.praktikum/react-developer-burger-ui-components'
 import style from './index.module.css'
+import PropTypes from 'prop-types';
 
-function BurgerConstructorDragerItem() {
+function BurgerConstructorDragerItem({ name, price, image }) {
    return (
       <div className={style.block}>
          <div className={style.icon}>
             <DragIcon type="primary" />
          </div>
          <ConstructorElement
-            text="Краторная булка N-200i (верх)"
-            price={50}
-            thumbnail={'https://code.s3.yandex.net/react/code/cheese.png'}
+            text={name.substr(0, 20) + '...'}
+            price={price}
+            thumbnail={image}
          />
       </div>
    );
 }
+
+BurgerConstructorDragerItem.propTypes = {
+   name: PropTypes.string.isRequired,
+   price: PropTypes.number.isRequired,
+   image: PropTypes.string.isRequired
+};
 
 export default BurgerConstructorDragerItem;

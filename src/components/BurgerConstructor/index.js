@@ -1,8 +1,10 @@
 import { CurrencyIcon, ConstructorElement, Button } from '@ya.praktikum/react-developer-burger-ui-components'
 import style from './index.module.css'
 import BurgerConstructorDragerBlock from '../BurgerConstructorDragerBlock/index'
+import burgersInredientsArray from '../../utils/data.js';
 
 function BurgerConstructor() {
+   let firstBun = burgersInredientsArray.find(el => el.type === 'bun');
    return (
       <div className={style.constructor}>
          <div className={style.wrapper}>
@@ -10,9 +12,9 @@ function BurgerConstructor() {
                <ConstructorElement
                   type="top"
                   isLocked={true}
-                  text="Краторная булка N-200i (верх)"
-                  price={200}
-                  thumbnail={'https://code.s3.yandex.net/react/code/cheese.png'}
+                  text={firstBun.name}
+                  price={firstBun.price}
+                  thumbnail={firstBun.image}
                />
             </div>
             
@@ -22,9 +24,9 @@ function BurgerConstructor() {
                <ConstructorElement
                   type="bottom"
                   isLocked={true}
-                  text="Краторная булка N-200i (низ)"
-                  price={200}
-                  thumbnail={'https://code.s3.yandex.net/react/code/cheese.png'}
+                  text={firstBun.name}
+                  price={firstBun.price}
+                  thumbnail={firstBun.image}
                />
             </div>
          </div>
@@ -35,7 +37,7 @@ function BurgerConstructor() {
                <CurrencyIcon type="primary" />
             </div>
             <Button type="primary" size="large">
-               Нажми на меня
+               оформить заказ
             </Button>
          </div>
       </div>

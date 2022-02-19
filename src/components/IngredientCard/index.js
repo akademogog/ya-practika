@@ -1,7 +1,8 @@
 import { Counter, CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components'
 import style from './index.module.css'
+import PropTypes from 'prop-types';
 
-function ingredientCard({ image, name, price }) {
+function IngredientCard({ image, name, price }) {
     let count = 0;
     return (
         <div className={style.card}>
@@ -16,4 +17,10 @@ function ingredientCard({ image, name, price }) {
     );
 }
 
-export default ingredientCard;
+IngredientCard.propTypes = {
+    name: PropTypes.string,
+    price: PropTypes.number,
+    image: PropTypes.string
+};
+
+export default IngredientCard;

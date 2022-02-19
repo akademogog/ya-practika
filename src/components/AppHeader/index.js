@@ -12,33 +12,32 @@ function AppHeader() {
         <header className={style.header}>
             <div className={style.container}>
                 <div className={style.containerLeft}>
-                    <button className={`${style.btn} ${state.constructorOpen ? style.active : ''}`}  size="large">
+                    <a href="#" className={`${style.btn} ${state.constructorOpen ? style.active : ''}`}>
                         <BurgerIcon type={`${state.constructorOpen ? 'primary' : 'secondary'}`} />
                         <span className="text text_type_main-default">
                             Конструктор
                         </span>
-                    </button>
+                    </a>
 
-                    <button className={style.btn} type="secondary" size="large">
+                    <a href="#" className={style.btn}>
                         <ListIcon type={`${state.lentaOpen ? 'primary' : 'secondary'}`} />
                         <span className="text text_type_main-default">
                             Лента заказов
                         </span>
-                    </button>
+                    </a>
                 </div>
                 
                 <a href="#" className={style.logo}>
                     <Logo />
                 </a>
 
-                <button className={style.btn} type="secondary" size="large">
+                <a href="#" className={style.btn}>
                     <ProfileIcon type={`${state.accountOpen ? 'primary' : 'secondary'}`} />
                     <span className="text text_type_main-default">
                         Личный кабинет
                     </span>
-                </button>
+                </a>
             </div>
-            
         </header>
     );
 }
